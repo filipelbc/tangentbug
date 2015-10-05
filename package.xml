@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+    <name>tangentbug</name>
+    <version>1.0.0</version>
+    <description>
+        simple implementation of tangent bug algorithm and testing with
+        differential robot in stage
+    </description>
+
+    <maintainer email="filipelbc@gmail.com">filipe</maintainer>
+
+    <license>none</license>
+
+    <author email="filipelbc@gmail.com">filipe</author>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <build_depend>geometry_msgs</build_depend>
+    <build_depend>sensor_msgs</build_depend>
+    <build_depend>nav_msgs</build_depend>
+    <build_depend>roscpp</build_depend>
+    <build_depend>tf</build_depend>
+    <run_depend>geometry_msgs</run_depend>
+    <run_depend>sensor_msgs</run_depend>
+    <run_depend>nav_msgs</run_depend>
+    <run_depend>roscpp</run_depend>
+    <run_depend>tf</run_depend>
+    <run_depend>stage_ros</run_depend>
+
+    <export>
+    </export>
+</package>

@@ -1,0 +1,23 @@
+<launch>
+
+    <!-- stage -->
+    <node pkg="stage_ros" type="stageros" name="robot" args="$(find tangentbug)/launch/bugtangent.world" >
+        <remap from="base_scan" to="scan"/>
+        <remap from="base_pose_ground_truth" to="pose"/>
+    </node>
+
+    <!-- setpoint -->
+    <node pkg="tangentbug" type="setpoint" name="setpoint" args="49 49 -180">
+    </node>
+
+    <!-- tf: map -> odom -->
+    <node pkg="tf" type="static_transform_publisher" name="map2odom"
+        args="1 1 0 0 0 0 map odom 100" >
+    </node>
+
+    <!-- control -->
+    <node pkg="tangentbug" type="tangentbug" name="controller" output="screen" >
+    </node>
+
+</launch>
+
